@@ -1,4 +1,5 @@
 tellraw @a {"text":"Crystal Destroyed","color":"red"}
+execute if score timing_tracker settings matches 0 run tellraw @a [{"nbt":"time_string","storage":"practice:timeparser","interpret":true},{"text":" Crystal Exploded","color":"white"}]
 execute if score crystal_break settings matches 0 run function practice:crystal_break/no_fly
 # queue the path reset before changing a perch to takeoff
 execute if score crystal_break settings matches 1 unless score phase stats matches 4..7 unless score phase stats matches 9 in minecraft:the_end run tag @e[type=minecraft:ender_dragon,tag=zc_practice_dragon,limit=1] add zc_crystal_fly_pending

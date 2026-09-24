@@ -37,6 +37,10 @@ execute if score saturation settings matches 21 if score player saturation match
 execute unless score onecycle flags matches 1 as @a[scores={bed_place=1}] if score timer settings matches 0 if score explosives stats matches 0 run tellraw @a [{"nbt":"time_string","storage":"practice:timeparser","interpret":true},{"text":" 1st Bed Placed","color":"white"}]
 scoreboard players set @a[scores={bed_place=1}] bed_place 2
 
+execute if score timing_tracker settings matches 0 if score in_lobby flags matches 0 as @a at @s anchored eyes positioned ^ ^ ^ run function zeroboard:timing/aim
+# Fuse:1s at function time means it blows up in this tick's world tick
+execute if score timing_tracker settings matches 0 if score in_lobby flags matches 0 as @e[type=minecraft:tnt,nbt={Fuse:1s}] run tellraw @a [{"nbt":"time_string","storage":"practice:timeparser","interpret":true},{"text":" TNT Exploded","color":"white"}]
+
 execute as @a[gamemode=survival] at @s run kill @s[y=30,dy=-10]
 
 execute if score in_lobby flags matches 1 unless score editing_loadout flags matches 1 run function practice:inventory/rename/check
