@@ -20,6 +20,7 @@ execute if data storage practice:gui pages[1].entries[{value:0b,tag:{index:13b}}
 execute if data storage practice:gui pages[1].entries[{value:0b,tag:{index:16b}}] run data modify storage practice:gui pages[1].entries[{value:0b,tag:{index:16b}}].tag.Enchantments set value [{}]
 execute if data storage practice:gui pages[1].entries[{value:0b,tag:{index:17b}}] run data modify storage practice:gui pages[1].entries[{value:0b,tag:{index:17b}}].tag.Enchantments set value [{}]
 execute if data storage practice:gui pages[1].entries[{value:0b,tag:{index:20b}}] run data modify storage practice:gui pages[1].entries[{value:0b,tag:{index:20b}}].tag.Enchantments set value [{}]
+execute if data storage practice:gui pages[1].entries[{value:0b,tag:{index:21b}}] run data modify storage practice:gui pages[1].entries[{value:0b,tag:{index:21b}}].tag.Enchantments set value [{}]
 execute if data storage practice:gui pages[1].entries[{value:1b,tag:{index:19b}}] run data modify storage practice:gui pages[1].entries[{value:1b,tag:{index:19b}}].tag.Enchantments set value [{}]
 
 execute in minecraft:the_end run data modify block 133 66 -1 Items set from storage practice:gui tower_view

@@ -120,6 +120,16 @@ data modify storage practice:gui tmpl set value {Slot:8b,id:"minecraft:chorus_fl
 function zeroboard:settings/install
 scoreboard players operation natural_terrain settings = #tmpl_value zc_ctrl
 
+scoreboard players set #tmpl_value zc_ctrl -1
+scoreboard players set #tmpl_default zc_ctrl -1
+execute store result score #tmpl_value zc_ctrl run data get storage practice:gui pages[1].entries[{tag:{index:21b}}].value
+execute store result score #tmpl_default zc_ctrl run data get storage practice:gui pages[1].defaults[{tag:{index:21b}}].value
+data remove storage practice:gui pages[1].entries[{tag:{index:21b}}]
+data remove storage practice:gui pages[1].defaults[{tag:{index:21b}}]
+data modify storage practice:gui tmpl set value {Slot:18b,id:"minecraft:oak_sign",Count:1b,size:2,value:1b,tag:{index:21b,display:{Name:'{"text":"Reset Info","italic":"false","color":"dark_aqua"}',LoreGray:['{"text":"On","color":"gray","italic":"false"}','{"text":"Off","color":"gray","italic":"false"}','{"text":"","italic":"false"}','{"text":"Prints tower, type and spawn","color":"dark_gray","italic":"false"}','{"text":"on death and manual reset","color":"dark_gray","italic":"false"}'],LoreColor:['{"text":"On","color":"gold","italic":"false"}','{"text":"Off","color":"gold","italic":"false"}','{"text":"","italic":"false"}','{"text":"Prints tower, type and spawn","color":"dark_gray","italic":"false"}','{"text":"on death and manual reset","color":"dark_gray","italic":"false"}']}}}
+function zeroboard:settings/install
+scoreboard players operation abandon_info settings = #tmpl_value zc_ctrl
+
 # base settings with more than two choices use a 2 item stack. left click empties the
 # slot, right click leaves one behind, which practice:gui/click_event reads as the direction
 data modify storage practice:gui pages[1].entries[{tag:{index:0b}}].Count set value 2b

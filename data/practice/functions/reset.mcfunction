@@ -1,3 +1,5 @@
+# show the resolved random config on abandon if setting enabled
+execute if score in_lobby flags matches 0 if score active timer matches 1 unless score flying_to_fountain flags matches 1 unless score onecycle flags matches 1 if score abandon_info settings matches 0 run function practice:print_abandoned_config
 # a reset abandons the run - flush the prediction before the markers go
 execute if score #prediction_active zc_ctrl matches 1 in minecraft:the_end run function zeroboard:prediction/force_finish
 schedule clear practice:tp_player
