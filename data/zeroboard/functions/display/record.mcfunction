@@ -61,6 +61,7 @@ execute if score ZRBuried zc_ctrl matches 62 run data modify storage zeroboard:r
 execute if score ZRBuried zc_ctrl matches 63 run data modify storage zeroboard:records work.render.spawn_short set value "O63"
 execute if score ZRBuried zc_ctrl matches 64 run data modify storage zeroboard:records work.render.spawn_short set value "O64"
 execute if score ZRBuried zc_ctrl matches 65 run data modify storage zeroboard:records work.render.spawn_short set value "O65"
+execute if score ZRBuried zc_ctrl matches 66 run data modify storage zeroboard:records work.render.spawn_short set value "O66"
 data modify storage zeroboard:records work.render.approach_short set value "Unknown"
 execute if score ZRApproach zc_ctrl matches 0 run data modify storage zeroboard:records work.render.approach_short set value "Front CW"
 execute if score ZRApproach zc_ctrl matches 1 run data modify storage zeroboard:records work.render.approach_short set value "Back CW"

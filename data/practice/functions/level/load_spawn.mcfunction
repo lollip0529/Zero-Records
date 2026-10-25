@@ -1,12 +1,12 @@
-# spawn list went 9 -> 20 entries. menu order is
+# spawn list went 9 -> 21 entries. menu order is
 #   0 Natural Distribution   1 Uniformly Random   2 Random Buried   3 Custom
-#   4 Open   5 Overhang   6..19 Buried 52..65
+#   4 Open   5 Overhang   6..20 Buried 52..66
 # but spawn_act keeps the base pack's numbering, so 4 and 5 are mapped back and the
-# buried entries are shifted down by 3 to land on spawn_act 3..16.
+# buried entries are shifted down by 3 to land on spawn_act 3..17.
 scoreboard players operation spawn_act settings = spawn settings
 execute if score spawn settings matches 4 run scoreboard players set spawn_act settings 0
 execute if score spawn settings matches 5 run scoreboard players set spawn_act settings 1
-execute if score spawn settings matches 6..19 run scoreboard players remove spawn_act settings 3
+execute if score spawn settings matches 6..20 run scoreboard players remove spawn_act settings 3
 
 # natural distribution - weighted to match how often each spawn occurs in real seeds
 execute if score spawn settings matches 0 run scoreboard players set mod rng 10000
@@ -25,10 +25,10 @@ execute if score spawn settings matches 0 if score #spawn_roll settings matches 
 execute if score spawn settings matches 0 if score #spawn_roll settings matches 6430..9999 run scoreboard players set spawn_act settings 1
 
 # uniformly random - flat roll over every spawn, ignoring how common it is
-execute if score spawn settings matches 1 run scoreboard players set mod rng 16
+execute if score spawn settings matches 1 run scoreboard players set mod rng 17
 execute if score spawn settings matches 1 run function practice:random/generate
 execute if score spawn settings matches 1 run scoreboard players operation spawn_act settings = r rng
-execute if score spawn settings matches 1 if score spawn_act settings matches 2..15 run scoreboard players add spawn_act settings 1
+execute if score spawn settings matches 1 if score spawn_act settings matches 2..16 run scoreboard players add spawn_act settings 1
 
 # custom - flat roll over the spawns ticked on the settings chest's spawn pool page
 execute if score spawn settings matches 3 run function practice:level/choose_spawn_pool

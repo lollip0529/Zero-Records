@@ -24,7 +24,7 @@ execute if score #filter_action zc_ctrl matches 6 if score #old_filter zc_ctrl m
 execute if score #filter_action zc_ctrl matches 6 if score #old_filter zc_ctrl matches 103 run scoreboard players set #filter_tower zc_ctrl -1
 
 execute if score #filter_action zc_ctrl matches 7 run scoreboard players add #filter_spawn zc_ctrl 1
-execute if score #filter_action zc_ctrl matches 7 if score #filter_spawn zc_ctrl matches 18.. run scoreboard players set #filter_spawn zc_ctrl 0
+execute if score #filter_action zc_ctrl matches 7 if score #filter_spawn zc_ctrl matches 19.. run scoreboard players set #filter_spawn zc_ctrl 0
 
 execute if score #filter_action zc_ctrl matches 8 run scoreboard players operation #old_filter zc_ctrl = #filter_pickaxe zc_ctrl
 execute if score #filter_action zc_ctrl matches 8 if score #old_filter zc_ctrl matches -1 run scoreboard players set #filter_pickaxe zc_ctrl 5

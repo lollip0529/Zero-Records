@@ -60,6 +60,7 @@ execute if score spawn_act settings matches 13 run data modify storage zeroboard
 execute if score spawn_act settings matches 14 run data modify storage zeroboard:records current merge value {cover:2,buried:63,spawn:"O63"}
 execute if score spawn_act settings matches 15 run data modify storage zeroboard:records current merge value {cover:2,buried:64,spawn:"O64"}
 execute if score spawn_act settings matches 16 run data modify storage zeroboard:records current merge value {cover:2,buried:65,spawn:"O65"}
+execute if score spawn_act settings matches 17 run data modify storage zeroboard:records current merge value {cover:2,buried:66,spawn:"O66"}
 
 # pickaxe, first match wins - gold beats netherite on purpose
 execute if entity @a[nbt={Inventory:[{id:"minecraft:golden_pickaxe"}]}] run data modify storage zeroboard:records current merge value {pickaxe_code:5,pickaxe:"Gold"}

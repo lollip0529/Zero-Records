@@ -40,13 +40,15 @@ execute unless score settings_page gui matches 0..3 run scoreboard players set s
 function zeroboard:settings/load
 execute unless score tower_pages_v2 gui matches 1 run function practice:gui/pages/home/init_pages
 execute unless data storage practice:gui spawn_pool[0] run function practice:gui/pages/settings/spawn_pool/init
+# worlds from before Buried 66 keep their ticks and get it appended
+execute unless data storage practice:gui spawn_pool[{spawn:17b}] run data modify storage practice:gui spawn_pool append value {Slot:16b,id:"minecraft:end_stone",Count:1b,enabled:1b,spawn:17b,tag:{index:16b,Enchantments:[{}],display:{Name:'{"text":"Buried 66","color":"dark_aqua","italic":false}',Lore:['{"text":"Enabled","color":"green","italic":"false"}']}}}
 function practice:gui/load
 
 execute unless score #filter_init zc_ctrl matches 1 run function zeroboard:filter/defaults
 execute unless score #filter_height zc_ctrl matches -1 unless score #filter_height zc_ctrl matches 78..111 run scoreboard players set #filter_height zc_ctrl -1
 execute unless score #filter_base zc_ctrl matches -1 unless score #filter_base zc_ctrl matches 1..10 run scoreboard players set #filter_base zc_ctrl -1
 execute unless score #filter_plus zc_ctrl matches -1..10 run scoreboard players set #filter_plus zc_ctrl -1
-execute unless score #filter_spawn zc_ctrl matches 0..17 run scoreboard players set #filter_spawn zc_ctrl 2
+execute unless score #filter_spawn zc_ctrl matches 0..18 run scoreboard players set #filter_spawn zc_ctrl 2
 execute unless score #filter_pickaxe zc_ctrl matches -1..6 run scoreboard players set #filter_pickaxe zc_ctrl -1
 execute unless score #filter_location zc_ctrl matches -1..3 run scoreboard players set #filter_location zc_ctrl -1
 execute unless score #filter_rotation zc_ctrl matches -1..1 run scoreboard players set #filter_rotation zc_ctrl -1

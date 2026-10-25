@@ -27,7 +27,7 @@ execute unless score #filter_tower zc_ctrl matches -1 unless score #run_tower zc
 execute if score #filter_spawn zc_ctrl matches 0 unless score #run_cover zc_ctrl matches 2 run scoreboard players set #match zc_ctrl 0
 execute if score #filter_spawn zc_ctrl matches 1 if score #run_cover zc_ctrl matches 0 run scoreboard players set #match zc_ctrl 0
 execute if score #filter_spawn zc_ctrl matches 3 unless score #run_cover zc_ctrl matches 0 run scoreboard players set #match zc_ctrl 0
-execute if score #filter_spawn zc_ctrl matches 4..17 unless score #run_buried zc_ctrl = #filter_spawn_height zc_ctrl run scoreboard players set #match zc_ctrl 0
+execute if score #filter_spawn zc_ctrl matches 4..18 unless score #run_buried zc_ctrl = #filter_spawn_height zc_ctrl run scoreboard players set #match zc_ctrl 0
 execute unless score #filter_pickaxe zc_ctrl matches -1 unless score #run_pickaxe zc_ctrl = #filter_pickaxe zc_ctrl run scoreboard players set #match zc_ctrl 0
 execute if score #filter_pickaxe zc_ctrl matches 0 unless data storage zeroboard:records work.current{cover:2,pickaxe:"Fist"} run scoreboard players set #match zc_ctrl 0
 execute unless score #filter_location zc_ctrl matches -1 unless score #run_approach zc_ctrl matches 0..7 run scoreboard players set #match zc_ctrl 0

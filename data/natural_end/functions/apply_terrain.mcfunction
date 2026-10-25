@@ -34,6 +34,7 @@ execute if score #spawn natural_end matches 14 run function natural_end:load/bur
 execute if score #spawn natural_end matches 15 run function natural_end:load/buried_64
 execute if score #spawn natural_end matches 15 run function natural_end:load/buried_64_extension
 execute if score #spawn natural_end matches 16 run function natural_end:load/buried_65
+execute if score #spawn natural_end matches 17 run function natural_end:load/buried_66
 
 # terrain structures put end stone in the spawn footprint, so restore Zero's platform last
 function natural_end:restore_spawn_platform

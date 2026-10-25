@@ -1,8 +1,8 @@
 # weighted roll, not a flat 1-in-5. 286 buckets split by how often each
 # cage actually turns up in real seeds:
-#   3 = Open (4)        4 = Overhang (7)    5 = Buried 52 (7)   6 = Buried 53 (7)
-#   7 = Buried 54 (93)  8 = Buried 55 (91)  9 = Buried 56 (49)  10 = Buried 57 (20)
-#   remaining 8 buckets defer to load_random_high_cage for Buried 58-65
+#   3 = Buried 52 (4)   4 = Buried 53 (7)   5 = Buried 54 (7)   6 = Buried 55 (7)
+#   7 = Buried 56 (93)  8 = Buried 57 (91)  9 = Buried 58 (49)  10 = Buried 59 (20)
+#   remaining 8 buckets defer to load_random_high_cage for Buried 60-66
 scoreboard players set mod rng 286
 function practice:random/generate
 execute if score r rng matches 0..3 run scoreboard players set spawn_act settings 3
