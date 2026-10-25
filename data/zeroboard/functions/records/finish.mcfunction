@@ -14,7 +14,7 @@ scoreboard players set #finish_observation_error zc_ctrl 0
 execute if score #arrival_ticks zc_ctrl matches 1.. run scoreboard players operation #death_tail zc_ctrl = #observed_finish zc_ctrl
 execute if score #arrival_ticks zc_ctrl matches 1.. run scoreboard players operation #death_tail zc_ctrl -= #arrival_ticks zc_ctrl
 execute if score #arrival_ticks zc_ctrl matches 1.. run scoreboard players operation #finish_observation_error zc_ctrl = #death_tail zc_ctrl
-execute if score #arrival_ticks zc_ctrl matches 1.. run scoreboard players remove #finish_observation_error zc_ctrl 200
+execute if score #arrival_ticks zc_ctrl matches 1.. run scoreboard players remove #finish_observation_error zc_ctrl 199
 scoreboard players operation #finish_ticks zc_ctrl = #observed_finish zc_ctrl
 execute if score #finish_valid zc_ctrl matches 1 store result storage zeroboard:records records[0].finish_ticks int 1 run scoreboard players get #finish_ticks zc_ctrl
 execute if score #finish_valid zc_ctrl matches 1 store result storage zeroboard:records records[0].observed_finish_ticks int 1 run scoreboard players get #observed_finish zc_ctrl

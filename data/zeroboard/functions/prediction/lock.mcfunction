@@ -20,7 +20,7 @@ execute if score #prediction_ready zc_ctrl matches 1 if score #predicted_flight 
 execute if score #prediction_ready zc_ctrl matches 1 if score #predicted_flight zc_ctrl matches 1.. run scoreboard players operation #flight_error zc_ctrl -= #predicted_flight zc_ctrl
 execute if score #lock_valid zc_ctrl matches 1 if score #prediction_ready zc_ctrl matches 1 if score #predicted_flight zc_ctrl matches 1.. if score #flight_error zc_ctrl > #prediction_guard zc_ctrl run scoreboard players operation #prediction_guard zc_ctrl = #flight_error zc_ctrl
 scoreboard players operation #finish_ticks zc_ctrl = #arrival_ticks zc_ctrl
-scoreboard players add #finish_ticks zc_ctrl 200
+scoreboard players add #finish_ticks zc_ctrl 199
 execute if score #lock_valid zc_ctrl matches 1 store result storage zeroboard:records records[0].arrival_ticks int 1 run scoreboard players get #arrival_ticks zc_ctrl
 execute if score #lock_valid zc_ctrl matches 1 store result storage zeroboard:records records[0].actual_flight_ticks int 1 run scoreboard players get #actual_flight zc_ctrl
 execute if score #lock_valid zc_ctrl matches 1 store result storage zeroboard:records records[0].flight_error int 1 run scoreboard players get #flight_error zc_ctrl
