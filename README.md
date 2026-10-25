@@ -14,6 +14,9 @@ Roughly what it adds:
   Resistance and friends) and a Custom Spawns pool
 - a Natural Terrain option next to Spawn: real End terrain around every spawn
   instead of Mescht's stand-in cages (off by default)
+- spawns up to Buried 66 (seed -78224660128093), and Natural Distribution rolls
+  each spawn about as often as real seeds do: Open 54.3%, Overhang 17.3%, o56
+  9.3%, down to o66 at about 1 in 570 billion
 
 ## Installing
 
