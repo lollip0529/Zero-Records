@@ -32,6 +32,9 @@ and settings stick around between visits.
 Zero 1.2.1 keeps its own loadouts, there's nothing to migrate. It also gets the
 path tracer 1.2.1 is missing and the timer display fix.
 
+Timing Practice is its own download, Zero Records-Timing Practice: a Fabric
+mod that carries this pack with Timing Practice added and loads it by itself.
+
 ## Removing it
 
 Run `/function zeroboard:settings/restore_chain_length` before you take the pack
