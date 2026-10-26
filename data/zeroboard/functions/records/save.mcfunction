@@ -26,21 +26,9 @@ execute if score tower settings matches 7 run data modify storage zeroboard:reco
 execute if score tower settings matches 8 run data modify storage zeroboard:records current.tower set value 100
 execute if score tower settings matches 9 run data modify storage zeroboard:records current.tower set value 103
 
-# approach: rotation*4 + direction*2 + location
-scoreboard players operation #approach zc_ctrl = rotation_act settings
-scoreboard players operation #approach zc_ctrl *= #c2 zc_ctrl
-scoreboard players operation #approach zc_ctrl += direction_act settings
-scoreboard players operation #approach zc_ctrl *= #c2 zc_ctrl
-scoreboard players operation #approach zc_ctrl += location_act settings
+function zeroboard:records/approach
 execute store result storage zeroboard:records current.approach_code int 1 run scoreboard players get #approach zc_ctrl
-execute if score #approach zc_ctrl matches 0 run data modify storage zeroboard:records current.approach set value "Front Diagonal CW"
-execute if score #approach zc_ctrl matches 1 run data modify storage zeroboard:records current.approach set value "Back Diagonal CW"
-execute if score #approach zc_ctrl matches 2 run data modify storage zeroboard:records current.approach set value "Front Straight CW"
-execute if score #approach zc_ctrl matches 3 run data modify storage zeroboard:records current.approach set value "Back Straight CW"
-execute if score #approach zc_ctrl matches 4 run data modify storage zeroboard:records current.approach set value "Front Diagonal CCW"
-execute if score #approach zc_ctrl matches 5 run data modify storage zeroboard:records current.approach set value "Back Diagonal CCW"
-execute if score #approach zc_ctrl matches 6 run data modify storage zeroboard:records current.approach set value "Front Straight CCW"
-execute if score #approach zc_ctrl matches 7 run data modify storage zeroboard:records current.approach set value "Back Straight CCW"
+data modify storage zeroboard:records current.approach set from storage zeroboard:records work.approach
 execute store result storage zeroboard:records current.angle int 1 run scoreboard players get angle_act settings
 execute store result storage zeroboard:records current.speed int 1 run scoreboard players get speed_act settings
 

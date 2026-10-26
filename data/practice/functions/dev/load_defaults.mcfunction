@@ -32,6 +32,8 @@ scoreboard players set loadout inv 0
 scoreboard objectives setdisplay sidebar
 
 function practice:level/repair
+# not an abandoned run, keep Reset Info quiet
+scoreboard players set active timer 0
 function practice:reset
 
 tellraw @a [{"text":"Default Values Loaded","color":"dark_red"}]
