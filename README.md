@@ -10,8 +10,10 @@ Roughly what it adds:
 - a flydown predictor: right after the kill it simulates the rest of the flight
   and prints the predicted finish time, so you don't have to wait for it
 - extra settings pages on top of the base ones: Dragon (Fly Chance, Fireball
-  Chance, On Crystal Break, Vanilla End Entry), Info (Timing Tracker, Fire
-  Resistance and friends) and a Custom Spawns pool
+  Chance, On Crystal Break, Vanilla End Entry), Info (Timing Tracker, Reset
+  Info, Fire Resistance and friends) and a Custom Spawns pool
+- Reset Info: on a death or reset mid run, chat shows the tower, type and spawn
+  the attempt rolled, the same lines the kill screen prints
 - a Natural Terrain option next to Spawn: real End terrain around every spawn
   instead of Mescht's stand-in cages (off by default)
 - spawns up to Buried 66 (seed -78224660128093), and Natural Distribution rolls

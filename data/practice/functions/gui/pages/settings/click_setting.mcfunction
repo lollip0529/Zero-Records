@@ -1,4 +1,4 @@
-execute if score index gui matches 0..20 if data storage practice:gui pages[1].entries[{active:1b}] run function practice:gui/pages/settings/list_menu
+execute if score index gui matches 0..21 if data storage practice:gui pages[1].entries[{active:1b}] run function practice:gui/pages/settings/list_menu
 execute if score index gui matches 24 if score settings_page gui matches 1..2 run scoreboard players remove settings_page gui 1
 execute if score index gui matches 25 if score settings_page gui matches 0..1 run scoreboard players add settings_page gui 1
 execute if score index gui matches 26 if score settings_page gui matches 1 run scoreboard players set settings_page gui 3
@@ -25,3 +25,4 @@ execute if score index gui matches 16 run scoreboard players operation fireball_
 execute if score index gui matches 17 run scoreboard players operation timing_tracker settings = value gui
 execute if score index gui matches 19 run scoreboard players operation vanilla_entry settings = value gui
 execute if score index gui matches 20 run scoreboard players operation natural_terrain settings = value gui
+execute if score index gui matches 21 run scoreboard players operation abandon_info settings = value gui
