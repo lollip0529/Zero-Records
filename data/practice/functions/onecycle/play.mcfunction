@@ -1,3 +1,5 @@
+# a run started this soon after loading keeps its dragon
+execute if score #heal zc_ctrl matches 1 run function zeroboard:fight/heal_end
 # save loadout if still editing
 execute if score editing_loadout flags matches 1 run function practice:inventory/save_loadout
 execute if score renaming flags matches 1 run function practice:inventory/rename/renamed

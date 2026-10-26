@@ -1,3 +1,4 @@
+function zeroboard:fight/tick
 execute in minecraft:the_end if score #prediction_active zc_ctrl matches 1 run function zeroboard:prediction/tick
 
 # lobby upkeep only matters while someone is near the board

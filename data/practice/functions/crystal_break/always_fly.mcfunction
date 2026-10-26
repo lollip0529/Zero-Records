@@ -1,3 +1,0 @@
-# scheduled functions start in the overworld; recheck the run and live phase
-execute if score in_lobby flags matches 0 if score crystal_break settings matches 1 in minecraft:the_end as @e[type=minecraft:ender_dragon,tag=zc_practice_dragon,tag=zc_crystal_fly_pending,limit=1] unless entity @s[nbt={DragonPhase:9}] unless entity @s[nbt={DragonPhase:4}] unless entity @s[nbt={DragonPhase:5}] unless entity @s[nbt={DragonPhase:6}] unless entity @s[nbt={DragonPhase:7}] run function practice:crystal_break/always_fly_start
-execute in minecraft:the_end run tag @e[type=minecraft:ender_dragon,tag=zc_crystal_fly_pending] remove zc_crystal_fly_pending

@@ -1,3 +1,5 @@
+# a run started this soon after loading keeps its dragon
+execute if score #heal zc_ctrl matches 1 run function zeroboard:fight/heal_end
 # clear any dragon left by the previous attempt before the new one. a completed
 # attempt keeps its full death animation until restart.
 function practice:cleanup_dragon
