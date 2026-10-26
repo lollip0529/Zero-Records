@@ -1,6 +1,7 @@
-# confirm at fountain arrival or collision and add the 200t death animation up front.
-# the missing-dragon fallback has already lived through that tail.
-execute if entity @e[type=minecraft:ender_dragon,limit=1] run scoreboard players add timer timer 200
+# confirm at fountain arrival or collision and add the death animation up front. the
+# timer already counted this tick, so 199 more lands on the tick the dragon is removed,
+# same as the base pack. the missing-dragon fallback has already lived through that tail.
+execute if entity @e[type=minecraft:ender_dragon,limit=1] run scoreboard players add timer timer 199
 scoreboard players set active timer 0
 # keeps prediction/lock out of the post-confirm window; cleared when the next
 # kill saves its record

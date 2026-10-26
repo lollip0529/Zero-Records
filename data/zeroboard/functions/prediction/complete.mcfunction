@@ -3,7 +3,7 @@ execute if score #prediction_valid zc_ctrl matches 0 run function zeroboard:pred
 scoreboard players set #finish_ticks zc_ctrl 0
 execute if score #prediction_valid zc_ctrl matches 1 store result score #finish_ticks zc_ctrl run data get storage zeroboard:records records[0].death_ticks
 execute if score #prediction_valid zc_ctrl matches 1 run scoreboard players operation #finish_ticks zc_ctrl += #sim_flight_ticks zc_ctrl
-execute if score #prediction_valid zc_ctrl matches 1 run scoreboard players add #finish_ticks zc_ctrl 200
+execute if score #prediction_valid zc_ctrl matches 1 run scoreboard players add #finish_ticks zc_ctrl 199
 execute if score #prediction_valid zc_ctrl matches 1 run scoreboard players operation #finish_ticks zc_ctrl += #prediction_guard zc_ctrl
 execute if score #prediction_valid zc_ctrl matches 1 store result storage zeroboard:records records[0].finish_ticks int 1 run scoreboard players get #finish_ticks zc_ctrl
 execute if score #prediction_valid zc_ctrl matches 1 store result storage zeroboard:records records[0].predicted_flight_ticks int 1 run scoreboard players get #sim_flight_ticks zc_ctrl

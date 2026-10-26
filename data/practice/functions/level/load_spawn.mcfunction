@@ -1,14 +1,16 @@
-# spawn list went 9 -> 20 entries. menu order is
+# spawn list went 9 -> 21 entries. menu order is
 #   0 Natural Distribution   1 Uniformly Random   2 Random Buried   3 Custom
-#   4 Open   5 Overhang   6..19 Buried 52..65
+#   4 Open   5 Overhang   6..20 Buried 52..66
 # but spawn_act keeps the base pack's numbering, so 4 and 5 are mapped back and the
-# buried entries are shifted down by 3 to land on spawn_act 3..16.
+# buried entries are shifted down by 3 to land on spawn_act 3..17.
 scoreboard players operation spawn_act settings = spawn settings
 execute if score spawn settings matches 4 run scoreboard players set spawn_act settings 0
 execute if score spawn settings matches 5 run scoreboard players set spawn_act settings 1
-execute if score spawn settings matches 6..19 run scoreboard players remove spawn_act settings 3
+execute if score spawn settings matches 6..20 run scoreboard players remove spawn_act settings 3
 
-# natural distribution - weighted to match how often each spawn occurs in real seeds
+# natural distribution - weighted to match how often each spawn occurs in real seeds:
+#   Open 54.3%  Overhang 17.3%  o52 0.4%  o53-o55 0.7%  o56 9.3%  o57 9.1%
+#   o58 4.9%  o59 2.0%  o60 0.5%  o61 1 in 1,000, o62 and up off the last bucket
 execute if score spawn settings matches 0 run scoreboard players set mod rng 10000
 execute if score spawn settings matches 0 run function practice:random/generate
 execute if score spawn settings matches 0 run scoreboard players operation #spawn_roll settings = r rng
@@ -20,15 +22,17 @@ execute if score spawn settings matches 0 if score #spawn_roll settings matches 
 execute if score spawn settings matches 0 if score #spawn_roll settings matches 1180..2089 run scoreboard players set spawn_act settings 8
 execute if score spawn settings matches 0 if score #spawn_roll settings matches 2090..2579 run scoreboard players set spawn_act settings 9
 execute if score spawn settings matches 0 if score #spawn_roll settings matches 2580..2779 run scoreboard players set spawn_act settings 10
-execute if score spawn settings matches 0 if score #spawn_roll settings matches 2780..2859 run function practice:level/load_random_high_cage
-execute if score spawn settings matches 0 if score #spawn_roll settings matches 2860..6429 run scoreboard players set spawn_act settings 0
-execute if score spawn settings matches 0 if score #spawn_roll settings matches 6430..9999 run scoreboard players set spawn_act settings 1
+execute if score spawn settings matches 0 if score #spawn_roll settings matches 2780..2829 run scoreboard players set spawn_act settings 11
+execute if score spawn settings matches 0 if score #spawn_roll settings matches 2830..2839 run scoreboard players set spawn_act settings 12
+execute if score spawn settings matches 0 if score #spawn_roll settings matches 2840 run function practice:level/choose_rare_buried
+execute if score spawn settings matches 0 if score #spawn_roll settings matches 2841..8270 run scoreboard players set spawn_act settings 0
+execute if score spawn settings matches 0 if score #spawn_roll settings matches 8271..9999 run scoreboard players set spawn_act settings 1
 
 # uniformly random - flat roll over every spawn, ignoring how common it is
-execute if score spawn settings matches 1 run scoreboard players set mod rng 16
+execute if score spawn settings matches 1 run scoreboard players set mod rng 17
 execute if score spawn settings matches 1 run function practice:random/generate
 execute if score spawn settings matches 1 run scoreboard players operation spawn_act settings = r rng
-execute if score spawn settings matches 1 if score spawn_act settings matches 2..15 run scoreboard players add spawn_act settings 1
+execute if score spawn settings matches 1 if score spawn_act settings matches 2..16 run scoreboard players add spawn_act settings 1
 
 # custom - flat roll over the spawns ticked on the settings chest's spawn pool page
 execute if score spawn settings matches 3 run function practice:level/choose_spawn_pool

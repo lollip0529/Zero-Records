@@ -14,6 +14,9 @@ Roughly what it adds:
   Resistance and friends) and a Custom Spawns pool
 - a Natural Terrain option next to Spawn: real End terrain around every spawn
   instead of Mescht's stand-in cages (off by default)
+- spawns up to Buried 66 (seed -78224660128093), and Natural Distribution rolls
+  each spawn about as often as real seeds do: Open 54.3%, Overhang 17.3%, o56
+  9.3%, down to o66 at about 1 in 570 billion
 
 ## Installing
 
@@ -28,6 +31,9 @@ and settings stick around between visits.
 
 Zero 1.2.1 keeps its own loadouts, there's nothing to migrate. It also gets the
 path tracer 1.2.1 is missing and the timer display fix.
+
+Timing Practice is its own download, Zero Records-Timing Practice: a Fabric
+mod that carries this pack with Timing Practice added and loads it by itself.
 
 ## Removing it
 

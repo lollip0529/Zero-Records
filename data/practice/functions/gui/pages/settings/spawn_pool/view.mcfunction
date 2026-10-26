@@ -1,4 +1,4 @@
 data modify storage practice:gui settings_view set from storage practice:gui spawn_pool
-data modify storage practice:gui settings_view append value {Slot:16b,id:"minecraft:lime_concrete",Count:1b,tag:{index:16b,display:{Name:'{"text":"Enable All","color":"green","italic":false}'}}}
-data modify storage practice:gui settings_view append value {Slot:17b,id:"minecraft:red_concrete",Count:1b,tag:{index:17b,display:{Name:'{"text":"Disable All","color":"red","italic":false}',Lore:['{"text":"an empty pool rolls every spawn","color":"gray","italic":false}']}}}
+data modify storage practice:gui settings_view append value {Slot:25b,id:"minecraft:lime_concrete",Count:1b,tag:{index:17b,display:{Name:'{"text":"Enable All","color":"green","italic":false}'}}}
+data modify storage practice:gui settings_view append value {Slot:26b,id:"minecraft:red_concrete",Count:1b,tag:{index:18b,display:{Name:'{"text":"Disable All","color":"red","italic":false}',Lore:['{"text":"an empty pool rolls every spawn","color":"gray","italic":false}']}}}
 data modify storage practice:gui settings_view append value {Slot:18b,id:"minecraft:arrow",Count:1b,tag:{index:24b,display:{Name:'{"text":"Run Settings","color":"green","italic":false}',Lore:['{"text":"player and world setup","color":"gray","italic":false}']}}}

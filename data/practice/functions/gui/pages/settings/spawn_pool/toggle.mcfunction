@@ -14,6 +14,7 @@ execute if score index gui matches 12 run data modify storage practice:gui spawn
 execute if score index gui matches 13 run data modify storage practice:gui spawn_pool[{tag:{index:13b}}].active set value 1b
 execute if score index gui matches 14 run data modify storage practice:gui spawn_pool[{tag:{index:14b}}].active set value 1b
 execute if score index gui matches 15 run data modify storage practice:gui spawn_pool[{tag:{index:15b}}].active set value 1b
+execute if score index gui matches 16 run data modify storage practice:gui spawn_pool[{tag:{index:16b}}].active set value 1b
 
 execute store result score enabled gui run data get storage practice:gui spawn_pool[{active:1b}].enabled
 

@@ -6,13 +6,13 @@
         "location": {
           "dimension": "minecraft:the_end",
           "block": {
-            "tag": "zeroboard:bed_exploded"
+            "tag": "zeroboard:block_exploded"
           }
         }
       }
     }
   },
   "rewards": {
-    "function": "zeroboard:timing/bed_exploded"
+    "function": "zeroboard:timing/block_exploded"
   }
 }
