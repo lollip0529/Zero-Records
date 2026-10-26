@@ -26,7 +26,7 @@ execute if score r rng matches 2250..2699 in minecraft:the_end run summon minecr
 execute if score r rng matches 2700..3149 in minecraft:the_end run summon minecraft:ender_dragon 0.0 128 0.0 {Tags:["zc_practice_dragon"],DragonPhase:0b,Rotation:[292.5f,0f]}
 execute if score r rng matches 3150..3599 in minecraft:the_end run summon minecraft:ender_dragon 0.0 128 0.0 {Tags:["zc_practice_dragon"],DragonPhase:0b,Rotation:[337.5f,0f]}
 # On Crystal Break: Vanilla needs the fight to tell this dragon about crystals
-execute if score crystal_break settings matches 2 run function zeroboard:fight/adopt
+execute if score crystal_break settings matches 1 run function zeroboard:fight/adopt
 
 execute store result entity @e[type=minecraft:ender_dragon,tag=zc_practice_dragon,limit=1] Rotation[0] float 0.1 run scoreboard players get r rng
 

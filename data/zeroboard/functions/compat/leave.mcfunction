@@ -2,7 +2,6 @@ scoreboard players set #zero_active zc_ctrl 0
 schedule clear practice:tp_player
 schedule clear practice:spawn_dragon
 schedule clear practice:level/refill_nodes
-schedule clear practice:crystal_break/always_fly
 schedule clear zeroboard:settings/clear_hunger
 schedule clear zeroboard:display/rearm_clicks
 schedule clear zeroboard:records/clear/disarm

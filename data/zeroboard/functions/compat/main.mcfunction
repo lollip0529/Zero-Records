@@ -9,9 +9,6 @@ execute if score in_lobby flags matches 0 run function practice:timer/timer
 
 execute if score in_lobby flags matches 1 run function practice:gui/main
 
-# undo always_fly's one-tick dip before anything below samples the dragon
-execute if score #af_dip100 zc_ctrl matches 1.. if entity @e[type=minecraft:ender_dragon,limit=1] run function practice:crystal_break/always_fly_restore
-scoreboard players set #af_dip100 zc_ctrl 0
 execute store result score phase stats run data get entity @e[type=ender_dragon,limit=1] DragonPhase
 execute if score in_lobby flags matches 0 run function practice:check_crystals
 function practice:fireball_chance

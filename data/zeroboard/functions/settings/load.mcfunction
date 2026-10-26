@@ -62,9 +62,11 @@ scoreboard players set #tmpl_value zc_ctrl -1
 scoreboard players set #tmpl_default zc_ctrl -1
 execute store result score #tmpl_value zc_ctrl run data get storage practice:gui pages[1].entries[{tag:{index:15b}}].value
 execute store result score #tmpl_default zc_ctrl run data get storage practice:gui pages[1].defaults[{tag:{index:15b}}].value
+execute if data storage practice:gui pages[1].entries[{tag:{index:15b},size:3}] if score #tmpl_value zc_ctrl matches 2 run scoreboard players set #tmpl_value zc_ctrl 1
+execute if data storage practice:gui pages[1].defaults[{tag:{index:15b},size:3}] if score #tmpl_default zc_ctrl matches 2 run scoreboard players set #tmpl_default zc_ctrl 1
 data remove storage practice:gui pages[1].entries[{tag:{index:15b}}]
 data remove storage practice:gui pages[1].defaults[{tag:{index:15b}}]
-data modify storage practice:gui tmpl set value {Slot:4b,id:"minecraft:end_crystal",Count:2b,size:3,value:1b,tag:{index:15b,display:{Name:'{"text":"On Crystal Break","italic":"false","color":"dark_aqua"}',LoreGray:['{"text":"No Fly","color":"gray","italic":"false"}','{"text":"Always Fly","color":"gray","italic":"false"}','{"text":"Vanilla","color":"gray","italic":"false"}'],LoreColor:['{"text":"No Fly","color":"gold","italic":"false"}','{"text":"Always Fly","color":"gold","italic":"false"}','{"text":"Vanilla","color":"gold","italic":"false"}']}}}
+data modify storage practice:gui tmpl set value {Slot:4b,id:"minecraft:end_crystal",Count:2b,size:2,value:1b,tag:{index:15b,display:{Name:'{"text":"On Crystal Break","italic":"false","color":"dark_aqua"}',LoreGray:['{"text":"No Fly","color":"gray","italic":"false"}','{"text":"Vanilla","color":"gray","italic":"false"}'],LoreColor:['{"text":"No Fly","color":"gold","italic":"false"}','{"text":"Vanilla","color":"gold","italic":"false"}']}}}
 function zeroboard:settings/install
 scoreboard players operation crystal_break settings = #tmpl_value zc_ctrl
 

@@ -5,4 +5,4 @@ execute store success score #zero_active zc_ctrl run function practice:gui/chang
 execute if score #zero_active zc_ctrl matches 1 run function zeroboard:load
 execute if score #zero_active zc_ctrl matches 1 if score #heal zc_ctrl matches 1 run function zeroboard:fight/heal_end
 # nobody online yet means a world load, not /reload
-execute if score #zero_active zc_ctrl matches 1 if score crystal_break settings matches 2 unless entity @a run function zeroboard:fight/heal_start
+execute if score #zero_active zc_ctrl matches 1 if score crystal_break settings matches 1 unless entity @a run function zeroboard:fight/heal_start
