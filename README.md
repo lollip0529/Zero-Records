@@ -6,9 +6,7 @@ Roughly what it adds:
 
 - a Zero Cycle Archive that keeps every kill: times, approach, angle, spawn
 - a flydown predictor: right after the kill it simulates the rest of the flight and prints the predicted finish time, so you don't have to wait for it for records to count
-- extra settings pages on top of the base ones:
-custom spawns pool, timing tracker, reset info, subrotations, left and right towers
-- Reset Info: on a death or reset mid run, chat shows the tower, type and spawn the attempt rolled, the same lines the kill screen prints
+- extra settings pages on top of the base ones: custom spawns pool, timing tracker, reset info, subrotations, left and right towers, reset info + Vanilla crystal strafes for ground zero
 - a Natural Terrain option next to Spawn: real End terrain around every spawn instead of stand-in cages (off by default)
 - spawns up to Buried 66 (seed -78224660128093), and Natural Distribution rolls each spawn about as often as real seeds do: Open 54.3%, Overhang 17.3%, o56 9.3%, down to o66 at about 1 in 570 billion
 
