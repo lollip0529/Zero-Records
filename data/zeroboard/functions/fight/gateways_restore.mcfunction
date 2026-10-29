@@ -1,0 +1,21 @@
+execute in minecraft:the_end run clone 420 0 400 422 4 402 95 73 -1
+execute in minecraft:the_end run clone 424 0 400 426 4 402 90 73 28
+execute in minecraft:the_end run clone 428 0 400 430 4 402 76 73 55
+execute in minecraft:the_end run clone 432 0 400 434 4 402 55 73 76
+execute in minecraft:the_end run clone 436 0 400 438 4 402 28 73 90
+execute in minecraft:the_end run clone 440 0 400 442 4 402 -2 73 95
+execute in minecraft:the_end run clone 444 0 400 446 4 402 -31 73 90
+execute in minecraft:the_end run clone 448 0 400 450 4 402 -58 73 76
+execute in minecraft:the_end run clone 452 0 400 454 4 402 -79 73 55
+execute in minecraft:the_end run clone 456 0 400 458 4 402 -93 73 28
+execute in minecraft:the_end run clone 460 0 400 462 4 402 -97 73 -2
+execute in minecraft:the_end run clone 464 0 400 466 4 402 -93 73 -31
+execute in minecraft:the_end run clone 468 0 400 470 4 402 -79 73 -58
+execute in minecraft:the_end run clone 472 0 400 474 4 402 -58 73 -79
+execute in minecraft:the_end run clone 476 0 400 478 4 402 -31 73 -93
+execute in minecraft:the_end run clone 480 0 400 482 4 402 -1 73 -97
+execute in minecraft:the_end run clone 484 0 400 486 4 402 28 73 -93
+execute in minecraft:the_end run clone 488 0 400 490 4 402 55 73 -79
+execute in minecraft:the_end run clone 492 0 400 494 4 402 76 73 -58
+execute in minecraft:the_end run clone 496 0 400 498 4 402 90 73 -31
+execute in minecraft:the_end run fill 420 0 400 499 4 402 minecraft:air
