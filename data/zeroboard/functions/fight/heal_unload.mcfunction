@@ -1,0 +1,23 @@
+execute in minecraft:the_end run forceload remove 0 0
+execute in minecraft:the_end run forceload remove 400 400
+execute in minecraft:the_end run forceload remove 420 400 499 402
+execute in minecraft:the_end run forceload remove 96 0
+execute in minecraft:the_end run forceload remove 91 29
+execute in minecraft:the_end run forceload remove 77 56
+execute in minecraft:the_end run forceload remove 56 77
+execute in minecraft:the_end run forceload remove 29 91
+execute in minecraft:the_end run forceload remove -1 96
+execute in minecraft:the_end run forceload remove -30 91
+execute in minecraft:the_end run forceload remove -57 77
+execute in minecraft:the_end run forceload remove -78 56
+execute in minecraft:the_end run forceload remove -92 29
+execute in minecraft:the_end run forceload remove -96 -1
+execute in minecraft:the_end run forceload remove -92 -30
+execute in minecraft:the_end run forceload remove -78 -57
+execute in minecraft:the_end run forceload remove -57 -78
+execute in minecraft:the_end run forceload remove -30 -92
+execute in minecraft:the_end run forceload remove 0 -96
+execute in minecraft:the_end run forceload remove 29 -92
+execute in minecraft:the_end run forceload remove 56 -78
+execute in minecraft:the_end run forceload remove 77 -57
+execute in minecraft:the_end run forceload remove 91 -30

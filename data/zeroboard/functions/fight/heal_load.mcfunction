@@ -1,0 +1,23 @@
+execute in minecraft:the_end run forceload add 0 0
+execute in minecraft:the_end run forceload add 400 400
+execute in minecraft:the_end run forceload add 420 400 499 402
+execute in minecraft:the_end run forceload add 96 0
+execute in minecraft:the_end run forceload add 91 29
+execute in minecraft:the_end run forceload add 77 56
+execute in minecraft:the_end run forceload add 56 77
+execute in minecraft:the_end run forceload add 29 91
+execute in minecraft:the_end run forceload add -1 96
+execute in minecraft:the_end run forceload add -30 91
+execute in minecraft:the_end run forceload add -57 77
+execute in minecraft:the_end run forceload add -78 56
+execute in minecraft:the_end run forceload add -92 29
+execute in minecraft:the_end run forceload add -96 -1
+execute in minecraft:the_end run forceload add -92 -30
+execute in minecraft:the_end run forceload add -78 -57
+execute in minecraft:the_end run forceload add -57 -78
+execute in minecraft:the_end run forceload add -30 -92
+execute in minecraft:the_end run forceload add 0 -96
+execute in minecraft:the_end run forceload add 29 -92
+execute in minecraft:the_end run forceload add 56 -78
+execute in minecraft:the_end run forceload add 77 -57
+execute in minecraft:the_end run forceload add 91 -30

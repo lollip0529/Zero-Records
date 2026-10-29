@@ -1,4 +1,4 @@
 # the run that was on when the world closed lost its dragon
 scoreboard players set #heal_reset zc_ctrl 0
 execute as @a[limit=1] run function practice:reset
-execute in minecraft:the_end run forceload add 0 0
+function zeroboard:fight/heal_load

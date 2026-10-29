@@ -5,6 +5,8 @@ datapack enable "file/ZeroPractice" after "vanilla"
 
 function lobby:refresh_tags
 execute in the_end run tp @a 137 65 0 90 0
+execute if score crystal_break settings matches 1 unless entity 6750dc12-58cc-4e09-9d9c-90f50e72f5b0 in minecraft:the_end run summon minecraft:ender_dragon 137 5 0 {UUID:[I;1733352466,1489784329,-1650683659,242415024],Tags:["zc_fight_park"],NoAI:1b,Silent:1b,DragonPhase:0}
+scoreboard players set #heal_warp zc_ctrl 1
 spawnpoint @p 137 65 0
 clear @p
 
